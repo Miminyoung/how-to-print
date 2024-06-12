@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+	<title>essential for print</title>
+	<link rel="stylesheet" href="styles.css">
+	<style type="text/css">
+
+	@font-face {font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;}
+
+	 @font-face {font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;}
+
+    .krona{font-family: "Krona One", sans-serif; font-weight: 400; font-style: normal;}
+
+	body,h1,h2,h3,h4,h5,h6,p,ul,nav{margin: 0; padding: 0}
+	html{font-family:'Pretendard-Bold' ;font-size: 1.4rem ;
+		line-height: 1.7; letter-spacing: -0.5px; 
+		scroll-behavior: smooth; text-align: center;}
+	body{background: white; word-break: keep-all;}
+	section{width: 100%; margin: auto; padding: 0px 0px 50px}
+	footer{}
+	img{width: 100%; display: block;}
+	.nomalp{font-family: 'Pretendard-Bold';font-size: 1.2rem ;}
+
+	nav{background: white; color: black;
+			position: fixed; width: 100%; z-index: 1000;}
+	.nav-flex{display: flex; justify-content: space-between;}
+	.logo{width: 350px; line-height: 70px}
+	.menu li{list-style-type: none; width: 200px; line-height: 70px;}
+	.menu li a{display: block; padding: 0px; margin: 0;
+						text-decoration: none; color: black; text-align: center;}
+	.menu li a:hover{display: block; color: #FF001F;}
+
+	header{position: relative; padding: 30px 0px 70px}
+	h1{font-family: "Krona One"; font-size: 12rem; line-height: 1; color: #FF001F; text-align: center;text-align: center;}
+	h2{font-family: "Krona One"; font-size: 8.5rem; line-height: 1; color: #07E111; text-align: center; position: relative; top: -100px; mix-blend-mode: darken;text-align: center;}
+	h3{font-family: "Krona One"; font-size: 3.0rem; color: #FFF500; 
+		padding-bottom: 100px;}
+
+	.wrap{width: 100%; margin: auto; position: relative; overflow: hidden;}
+
+	#red{width: 1700px; background: red; color: white;position: relative;}
+	.book{padding: 100px 50px 10px 50px; position: relative;}
+
+	.blackcontainer{width:95%; background-color: black; margin: 100px auto; padding: 50px 0}
+
+	.container{position: relative; text-align: center; display: flex;
+    justify-content: center; align-items: center;}
+	.image-container {width: 95%; height: 90vh; position: relative;}
+	.image-container img {width:100%; height:100%; object-fit:cover;
+						position: absolute;top: 0;left: 0;}
+	.text{position: absolute; top: 90%; left: 50%; 
+		  transform: translate(-50%, -50%);z-index: 2;
+		  font-size: 1.8rem; color: #24FF00; line-height: 1.4;}
+
+	.image-container2 {width: 95%; height: 19vh; position: relative; margin: auto}
+	.image-container2 img {width:100%; height:100%; object-fit:cover;
+						position: absolute;top: 0;left: 0;}
+
+
+	.graycontainer{width:95%; background-color: #808080; margin: auto}
+	.print {display: flex; align-items: center; padding: 50px 300px }
+	.dotimage {max-width: 100px;height: auto;}
+	.text-box { background-color: white; padding: 10px 100px 10px 20px; 
+				margin-left: 10px; opacity: 0; transition: opacity 0.3s ease; 
+				white-space: nowrap;font-weight: bold; text-align: left;}
+	.print:hover .text-box { opacity: 1;}
+
+	/*.wrap-flex{width: 100%; margin: auto; position: relative; overflow: hidden;
+			display: flex; justify-content: center; align-items: center;}
+	.grid{display: grid; grid-template-columns: repeat(5, 100px); grid-template-rows: repeat(4, 100px); gap: 100px 10px ; margin: auto; position: relative;overflow: hidden;}
+	.dot{width: 100px; height: 100px; border-radius: 50%;}
+	.dblack { background-color: black; }
+	.dmagenta { background-color: #E4007F; }
+	.dblue { background-color: #00A0E9; }
+	.dyellow { background-color: #FFF100; }
+	.dquestion {background-color: white; display: flex; justify-content: center;
+				align-items: center; color: green; font-size: 48px;}*/
+
+	.greencontainer{width:95%; background-color: #08AA68; margin: auto}
+	.wrap-riso{width: 60%; margin: auto; position: relative; overflow: hidden;}
+	.grid2{display: grid; grid-template-columns: 1fr 1fr;justify-content: center; align-items: center; }
+	.grid2 img, .container p{ max-width: 100%; height: auto; }
+ 
+	.grid3{display: grid; grid-template-columns: repeat(3, 1fr);justify-content: center; align-items: center; width: 60%; }
+	.grid3 img{width: 100%; max-width: none; height: auto; }
+
+	.grid4{display: grid; grid-template-columns: 1fr 1fr;justify-content: center;align-items: center;width: 60%;}
+	.grid4 img{width: 101%; max-width: none; height: auto;}
+
+	.wrap-flex8{width: 95%; margin: auto; position: relative; overflow: hidden;
+			display: flex; justify-content: center; align-items: center;background-color: white;}
+	.grid8{display: grid; grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, 1fr);justify-content: center; align-items: center;}
+	.wrap-flex8 p {transition: background-color 0.2s ease;}
+    .wrap-flex8 p:hover {background-color: yellow;}
+
+	.pinkcontainer{width:95%; background-color: #FF6CBB; margin: auto; padding: 30px 0}
+	.pinkcontainer, .brightgreencontainer, .redcontainer p{font-size: 1.1rem; padding: 30px 0 }
+	.wrap-paper{width: 70%; margin: auto; position: relative; overflow: hidden;
+				padding: 30px 0}
+	.wrap-header{width: 80%; margin: auto; position: relative; overflow: hidden;
+				padding: 0px 30px}
+	.grid-h{display: grid; grid-template-columns: 4fr 6fr; justify-content: center; text-align: left;}
+	.whiteback{background: white; color: black; font-size: 1.2rem; padding:0 0 40px 0}
+	.blackback{background: black; color: white; font-size: 1.15rem; padding:0 0 30px 0}
+
+
+	.bluecontainer{width:95%; background-color: #6BD1FF; margin: auto; padding: 30px 0}
+	.bluecontainer p{font-size: 1.1rem; padding: 30px 350px }
+	.grid02{display: grid; grid-template-columns: 1fr 1fr; justify-content: center; text-align: center; gap: 0px 30px}
+	.grid02 p{background: white; padding: 19px 50px;text-align: center;}
+
+	.brightgreencontainer{width:95%; background-color: #24FF00; margin: auto}
+	.grid04{display: grid; grid-template-columns: repeat(4, 1fr);justify-content: center; align-items: center; text-align: left;}
+
+	.redcontainer{width:95%; background-color: red; margin: auto}
+
+	.whitecontainer{width:95%; background-color: white; margin: auto;}
+	.whitecontainer p{padding: 20px 0}
+	.grid-p{padding: 10px 150px;display: grid; grid-template-columns: 2.5fr 1.5fr 6fr; justify-content: center; text-align: left;font-size: 1.1rem}
+
+	.grid-tip{display: grid; grid-template-columns: 1fr 1fr; justify-content: center; text-align: center; gap: 30px}
+	.grid-tip p{text-align: left; padding: 0 200px}
+	.redp{color: red; font-size: 1.2rem}
+
+	.line1{font-size: 0.9rem; width: 100%; height: 50px; 
+		overflow: visible; position: relative;
+		border-top: 2px solid black; border-bottom: 1px solid black;}
+	.line2{font-size: 0.9rem; width: 100%; height: 50px; 
+		overflow: visible; position: relative;
+		border-top: 1px solid black; border-bottom: 2px solid black;}
+	.lineanime{position: absolute; white-space: nowrap; left: 50%; top: 50%;
+        transform: translate(-50%, -50%); animation: moveText 10s linear infinite;
+        animation-play-state: running;}
+	@keyframes moveText { 0% { left: 0; } 100% { left: -100%; }}
+
+	.wrap-footer{background: red; padding: 100px 200px}
+	.footer{color: white;text-align: left;display: flex;}
+	.footerlogo{color: white;font-size: 2rem; line-height: 1.1; text-align: left; padding-bottom: 30px}
+	.footerp{font-size: 0.8rem;padding: 15px 0px 15px}
+
+
+	.column {padding: 0px 20px; box-sizing: border-box;}
+	.column-large {flex: 2.5; margin-right:40px }
+	.column-medium {flex: 2;}
+	.column-small {flex: 1;}
+
+	.rotate-container {display: flex; flex-direction: column; align-items: center;
+	 	justify-content: center; transition: transform 1s ease;margin: 20px 0;}
+    .rotate-container:hover {transform: rotate(10deg);}
+	.rbcontainer{width:95%; background-color: red; margin: auto}
+	.grid-b{padding:0px; display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: center; text-align: left;}
+	.grid-b p{color: #D9D9D9;line-height: 1.4}
+   .zoom-container {display: flex;flex-direction: column;align-items: center;
+   	justify-content: center;transition: transform 0.5s ease, z-index 0.5s ease;
+   	position: relative; z-index: 1;margin: 10px 0;}
+    .zoom-container:hover {transform: scale(1.05);z-index: 10;}
+
+	</style>
+</head>
+
+<body>
+	<nav>
+		<div class="wrap nav-flex krona">
+			<div class="logo">essential print</div>
+			<ul class="menu nav-flex" style="font-size: 0.8rem;">
+				<li><a href="#e1">1)print</a></li>
+				<li><a href="#e2">2)riso</a></li>
+				<li><a href="#e3">3)paper</a></li>
+				<li><a href="#e4">4)tip</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+<div class="blackcontainer">
+	<section>
+		<div class="wrap">
+		<div class="zoom-container" >
+			<div class="image-container2"  style="height: 13.5vh;">
+				<img src="red.png"></div>
+			<div class="rbcontainer">
+				<div class="grid-b">
+				<p>디자이너를 위한 필수 인쇄 팁<br>디자이너를 위한 필수 정보<br>한번에 모아보자! 인쇄의 A부터 Z</p>
+				<p>Essential Printing Tips for Designers<br>Designer Essentials<br>All in one place! The A to Z of printing</p>
+				<p>Wichtige Drucktipps für Designer<br>Designer-Essentials<br>Alles an einem Ort! Das A bis Z des Druckens</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="zoom-container" >
+			<div class="image-container2" style="height: 13.7vh">
+				<img src="brightgreen.png"></div>
+			<div class="rbcontainer" style="background:#24FF00">
+				<div class="grid-b">
+				<p  style="color:#6F6F6F">디자이너를 위한 필수 인쇄 팁<br>디자이너를 위한 필수 정보<br>한번에 모아보자! 인쇄의 A부터 Z</p>
+				<p  style="color:#6F6F6F">Essential Printing Tips for Designers<br>Designer Essentials<br>All in one place! The A to Z of printing</p>
+				<p  style="color:#6F6F6F">Wichtige Drucktipps für Designer<br>Designer-Essentials<br>Alles an einem Ort! Das A bis Z des Druckens</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="zoom-container" >
+		<div class="image-container2"  style="height: 13.5vh;">
+				<img src="magenta.png"></div>
+			<div class="rbcontainer" style="background:#FF10F5">
+				<div class="grid-b" style="padding: 20px 0px;">
+				<p>인쇄 퀄리티를 높이기 위한 팁<br>인쇄에 어려움을 겪는 모든 분들을 위하여</p>
+				<p>Tips to improve your printing quality<br>For everyone who has trouble printing</p>
+				<p>Tipps zur Verbesserung Ihrer Druckqualität<br>Für alle, die Probleme beim Drucken haben</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="zoom-container" >
+		<div class="image-container2"  style="height: 13.5vh;">
+				<img src="deepblue.png"></div>
+			<div class="rbcontainer" style="background:#000AFF">
+				<div class="grid-b" style="padding: 20px 0px;">
+				<p>인쇄 퀄리티를 높이기 위한 팁<br>인쇄에 어려움을 겪는 모든 분들을 위하여</p>
+				<p>Tips to improve your printing quality<br>For everyone who has trouble printing</p>
+				<p>Tipps zur Verbesserung Ihrer Druckqualität<br>Für alle, die Probleme beim Drucken haben</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</div>
+
+		<div class="wrap">
+			<h1>essential<br>for print</h1>
+			<h2>HOW<br>TO PRINT</h2>
+			<p style="font-size: 1.5rem">PRINT GUIDE</p>
+		</div>
+	</header>
+
+<div class="blackcontainer">
+	<section>
+		<div class="wrap">
+			<img src="book.gif" 
+			style="width: 30%; display: inline-block; margin: auto; padding: 30px 0px;">
+
+		<div class="rotate-container" style="z-index: 2;">
+			<div class="image-container2"  style="height: 13.5vh; z-index: 2;">
+				<img src="red.png"></div>
+			<div class="redcontainer"style="z-index: 2;">
+				<p style="color:white;">복잡하고 어려운 단어에 머리아파 본적있다면?<br>인쇄소가서 진땀 빼본적있다면?</p></div>
+		</div>
+
+	<div class="rotate-container">
+		<div class="image-container2" style="height: 13.7vh;">
+			<img src="brightgreen.png">
+		</div>
+			<div class="brightgreencontainer">
+			<p>초보 디자이너를 위한 인쇄 가이드<br>인쇄소 가기 전에 보고 가세요!</p></div>
+		</div>
+	</div>
+	</section>
+</div>
+
+	<section>
+		<div class="wrap">
+			<div class="container">
+				<div class="image-container">
+				<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWs4bzdlcjB6aW04NjlwZDRjazVyZHkwYWEwMHF5bGRwZXU4YzF5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hR8vM0XFPtJNSk1xng/giphy.webp">
+			</div>
+			<div class="text">
+				<p>알고있으면 인쇄비를 절약할 수 있는<br>인쇄종류에 대해 알아볼까요?</p>
+			</div>
+		</div>
+	</section>
+
+
+<!--<div class="graycontainer">
+	<section id="e1">
+		<div class="wrap-flex grid">
+        <div class="dot dblack" style="grid-column: 1; grid-row: 1;"></div>
+        <div class="dot dblack" style="grid-column: 1; grid-row: 2;"></div>
+        <div class="dot dblack" style="grid-column: 1; grid-row: 3;"></div>
+        <div class="dot dblack" style="grid-column: 1; grid-row: 4;"></div>
+
+        <div style="grid-column: 2; grid-row: 2;"> </div>
+        <div class="dot dmagenta" style="grid-column: 2; grid-row: 2;"></div>
+        <div class="dot dmagenta" style="grid-column: 2; grid-row: 3;"></div>
+        <div class="dot dmagenta" style="grid-column: 2; grid-row: 4;"></div>
+        
+        <div class="dot dblue" style="grid-column: 3; grid-row: 3;"></div>
+        <div class="dot dblue" style="grid-column: 3; grid-row: 4;"></div>
+        
+        <div class="dot dyellow" style="grid-column: 4; grid-row: 3;"></div>
+        <div class="dot dyellow" style="grid-column: 4; grid-row: 4;"></div>
+        
+        <div class="dot dquestion" style="grid-column: 5; grid-row: 4;">?</div>
+    </div>	
+	</section>
+</div>-->
+
+<div class="blackcontainer">
+<div class="image-container2">
+	<img src="gray.png">
+</div>
+<div class="graycontainer">
+	<section id="e1">
+		<div class="print">
+			<img class="dotimage" src="one.png" alt="one">
+			<div class="text-box">1도 인쇄 (Single Tone Printing)<br>흑백 인쇄 또는 c,m,y,k에서 한 가지 색만 사용한 인쇄(단도인쇄).</div>
+		</div>
+
+		<div class="print">
+			<img class="dotimage"style='max-width: 176.6px;'src="two.png"alt="two">
+			<div class="text-box">2도 인쇄<br>두 가지 색을 사용한 인쇄. 주로 검정(흑백)을 기본으로 한 가지 색을 추가하여 인쇄.<br>2가지 색만 나오는 것은 아니다. 2도 색상과 검정을 혼합해서 비교적 다양한 색상을 만들 수 있다. </div>
+		</div>
+
+		<div class="print">
+			<img class="dotimage"style='max-width: 335.46px;'src="four.png"alt="four">
+			<div class="text-box">4도 인쇄<br>c,m,y,k 4가지 색을 사용한 풀컬러 인쇄.<br> 4가지 색을 조합하여 대부분의 색을 표현할 수 있다.</div>
+		</div>
+
+		<div class="print">
+			<img class="dotimage" style='max-width: 413.83px;' src="star.png" alt="star">
+			<div class="text-box">별색 인쇄<br>c,m,y,k 네 가지 색 이외의 별도의 색을 만들어 인쇄.<br><br>다음 세가지 경우에서 인쇄<br>1. cmyk로 표현이 어려운  경우<br>2. 금색, 은색, 형광색, 파스텔 등 특수한 색을 표현해야하는 경우<br>3. CI나 BI등 색상이 절대적으로 일치해야하는 경우<br></div>
+		</div>
+	</section>
+</div>
+</div>
+</div>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 19.5vh">
+	<img src="greengra.png">
+</div>
+<div class="greencontainer">
+	<section style="padding-top: 50px;" id="e2">
+		<div class="wrap-riso">
+			<h3>What is Risograph?</h3>
+		<div class="grid2" style=" padding: 30px 0px;">
+			<p style="padding: 50px 50px 135px;text-align: left; background: white">리소 인쇄(Risograph)는 하나의 문서를 여러 장 찍어 낼 수 있게 개발된 공판 인쇄 기법 입니다. 공판이 되는 막을 마스터(원지)라 하며, 마스터에 미세한 구멍을 뚫어 이미지를 표현합니다. 그리고 구멍 사이로 잉크를 내보내어 용지에 이미지를 인쇄합니다.</p>
+			<img src="riso.jpg" alt="riso">
+		</div>
+	</section>
+
+	<section style=" padding: 100px 0px;">
+		<div class="wrap-riso" style="background: #FFF500; padding: 50px 0" >
+			<p>|  특징  |
+			<br><br>1. 한 번에 한 가지 또는 두 가지 색상의 인쇄가 가능해요.<br>인쇄 과정을 반복(오버프린트)하면 색상 수에 제한 없이 결과물을 만들어 낼 수 있어요.
+			<br>2. 원료의 특성상 건조가 느려요.
+			<br>3. 코팅이 된 종이에는 인쇄가 불가능해요.
+			<br>4. 인쇄 정합에 오차가 있어 완성된 장마다 그 결과에 차이가 있을 수 있어요.
+			<br>5. 별색 잉크 자체의 밝고 선명한 색감과 독특한 질감을 표현 가능해요.
+			<br>6. 형광 핑크, 형광 옐로우, 반짝이는 금색, 백색 등의 별색을 소량 인쇄 가능해요.</p>
+		</div>
+	</section>
+
+	<section style=" padding: 100px 0px;">
+		<div class="wrap-riso" style="background: white; padding: 50px 0">
+			<p>|  표현  |
+			<br><br>하나의 색상을 사용한 인쇄부터 여러가지 색상을 혼합한 인쇄까지 할 수 있어요.
+			<br>사용하는 색상의 갯수에 따라 만들어야하는 파일의 수도 달라집니다.</p>
+		</div>
+		<div class="wrap-riso grid3">
+  			<img src="one.jpg" alt="one">
+  			<img src="two.jpg" alt="two">
+  			<img src="four.jpg" alt="four">
+		</div>
+	</section>
+
+	<section style=" padding: 100px 0px;">
+		<div class="wrap-riso grid4" style="background: white;padding: 20px 0">
+			<p>|  오버프린트  |</p>
+			<p>|  녹아웃  |</p>
+			<p>이미지가 겹쳐진 부분을 그대로 겹쳐 인쇄하는 방법.</p>
+			<p>이미지가 겹쳐진 부분에서 어느 한쪽을 비우는 방법.<br>인쇄 오차에 의해 종이의 흰 부분이 보일 수도 있어요.</p>
+		</div>
+		<div class="wrap-riso grid4">
+			<img src="overprint.jpg" alt="overprint">
+  			<img src="nokout.jpg" alt="nokout">
+		</div>
+	</section>
+
+	<section style=" padding: 100px 0px;">
+		<div class="wrap-riso" style="background: white; padding: 50px 0">
+			<p>|  파일  |<br>색상별로 분리한 흑백 파일을 준비해야해요.<br>파일에 포함된 레스터 이미지는 그레이스케일 모드로 변환해야 하며,<br>해상도는 300-600dpi를 권장합니다.</p><br>
+			<p>|  분판  |<br>컬러를 흑백으로 변환할 때, 명도에 따른 회색도 값을 주의해야해요.<br>예를 들어 보라색 레이어의 흑백 파일을 만들 때는<br>가장 진한 보라 부분이 가장 진한 블랙으로 되어 있어야 해요!</p>
+		</div>
+		<div class="wrap-riso grid4">
+			<img src="colorgra.jpg" alt="colorgra">
+  			<img src="monogra.jpg" alt="monogra">
+  			<p style="background:white; padding: 20px 0">원하는디자인</p>
+  			<p style="background:#FFF500 ;padding: 20px 0">보라 분판</p>
+		</div>
+	</section>
+	</div>
+	</div>
+
+	<section style="padding: 0">
+		<div class="wrap">
+			<p class="nomalp">인쇄를 한 뒤 후가공 작업을 통해 작업물의 퀄리티를 높일 수 있어요!</p>
+		</div>
+	</section>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 18.4vh">
+	<img src="yellow.png">
+</div>	
+	<section>
+		<div class="wrap-flex8 grid8">
+		<div style="grid-column: 1; grid-row: 1;">
+			<img src="pp1.png" alt="pp1">
+			<p>박<br>인쇄물에 빛나는 글자나 로고를 표현하기 위해 사용되는 후가공</p>
+		</div>
+
+        <div style="grid-column: 2; grid-row: 1;">
+        	<img src="pp2.png" alt="pp2">
+			<p>형압<br>글자, 로고 또는 특정 디자인에 압력을 가하여 돌출시키거나 들어가게 하는 후가공</p>
+        </div>
+
+        <div style="grid-column: 3; grid-row: 1;">
+        	<img src="pp3.png" alt="pp3">
+        	<p>코팅(라미네이팅)<br>얇은 비닐 필름을 인쇄면에 붙이는 후가공<br>무광 / 유광 / uv / 홀로그램</p>
+        </div>
+
+        <div style="grid-column: 4; grid-row: 1;">
+        	<img src="pp4.png" alt="pp4">
+        	<p>접지<br>사각 인쇄물을 수직이나 수평으로 <br>접어주는 가공</p>
+        </div>
+        
+		<div style="grid-column: 1; grid-row: 2;">
+			<img src="pp5.png" alt="pp5">
+			<p>오시<br>글자, 로고 또는 특정 디자인에 압력을 가하여 돌출시키거나 들어가게 하는 후가공</p>
+		</div>
+
+        <div style="grid-column: 2; grid-row: 2;">
+        	<img src="pp6.png" alt="pp6">
+        	<p>타공<br>종이에 원형의 구멍을 뚫는 후가공<br>고리나 끈을 꿰어 걸거나 묶을 수 있음</p>
+        </div>
+
+        <div style="grid-column: 3; grid-row: 2;">
+        	<img src="pp7.png" alt="pp7">
+        	<p>미싱<br>점선 커팅을 하여 해당 부분을 뜯어 분리하기 쉽게 만드는 가공</p>
+        </div>
+
+        <div style="grid-column: 4; grid-row: 2;">
+        	<img src="pp8.png" alt="pp8">
+        	<p>귀도리(라운딩)<br>재단 후 각진 인쇄용지의 모서리를 둥글게 가공하는 후가공</p>
+        </div>
+		</div>
+	</section>
+</div>
+
+	<section>
+			<div class="wrap">
+		<div class="line1 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span></div>
+		</div>
+		<div class="line2 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</div>
+		</div>
+	</div>
+	</div>
+		<div class="wrap container image-container">
+			<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnI5eHY4aGo5eGExODIyMDBwYWR6ZnNmM3A5cTRncGxtd2F5M3Q3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MYwmrfmfgy1l7UGGK0/giphy.gif">
+		</div>
+			<div class="wrap">
+		<div class="line1 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span></div>
+		</div>
+		<div class="line2 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</div>
+		</div>
+	</div>
+	</section>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 15.5vh">
+	<img src="pink.png">
+</div>
+	<section id="e3">
+		<div class="pinkcontainer">
+			<div class="wrap-header grid-h">
+			<p style="font-size: 1.8rem;">종이 규격과 판형</p>
+			<p>어떤 종이 사이즈를 선택하느냐에 따라 인쇄물의 분위기가 달라지기 때문에 내 디자인에 맞는 종이 사이즈를 고르는게 정말 중요해요. 인쇄의 기본인 종이사이즈에 대해 알아볼까요?</p>
+		</div>
+		</div>
+	</section>
+
+<div class="image-container2" style="height: 15.5vh">
+	<img src="pink.png">
+</div>
+<section>
+		<div class="pinkcontainer">
+			<div class="wrap-paper grid02">
+			<p style="background: red; color: white; font-size: 1.3rem; padding: 20px 0;">A 시리즈(A계열 종이)</p>
+			<p style="background: red; color: white; font-size: 1.3rem; padding: 20px 0;">B 시리즈(B계열 종이)</p>
+			<img src="reda.png" style="padding: 0px 0px 30px">
+			<img src="redb.png" style="padding: 0px 0px 30px">
+			<p>국제적으로 통용되는 종이 규격으로 한국에서도 이 기준을 따르고 있어요. 우리가 일반적으로 가장 많이 사용하는 종이 대부분이 a계열 종이로 이루어져있어요.</p>
+			<p>에도시대에 관용지로 사용되었던 미농지의 크기에서 유래되었어요. 우리가 4절지라고 부르는 것이 미농 전지를 4등분한 것을을 의미해요.</p>
+		</div>
+		</div>
+	</section>
+</div>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 13.5vh">
+	<img src="blue.png">
+</div>
+	<section>
+		<div class="bluecontainer ">
+			<p style="color: white;">우리나라에서 통용되는 종이 규격은 몇가지 더 있어요.가장 일반적으로 사용되는 규격으로는 국전지와 46전지가 있어요.</p>
+		<div class="wrap-paper grid02">
+			<p style="background: #2E9BFF; color: black; font-size: 1.3rem; padding: 20px 0;">국전지(636*939)</p>
+			<p style="background: #2E9BFF; color: black; font-size: 1.3rem; padding: 20px 0;">46전지(788*1091)</p>
+			<img src="bluea.png">
+			<img src="blueb.png">
+		</div>
+			<p style="color: white;">a1(841x594)의 경우 국전지(939X636)에 맞는 편이고 b1의 경우 46전지에 들어갈 수 있어요. 그렇다고 모든 a시리즈가 국전지에, b시리즈가 46전지에 맞는 건 아니에요.</p>
+			<p style="color: white;">국판형을 국전지에, 46판형을 46전지에 인쇄하면 종이 손실률이 낮아져요.</p>
+		</div>
+	</section>
+</div>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 13.7vh">
+	<img src="brightgreen.png">
+</div>
+	<section>
+		<div class="brightgreencontainer">
+		<div class="wrap-paper">
+			<p>국내에서 가장 많이 사용되는 판형을 알아볼까요?</p>
+			<img src="green.png" style="max-width:600px; margin: auto;padding: 30px 0 0;">
+		</div>
+		</div>
+	</section>
+</div>
+
+<div class="blackcontainer">
+<div class="image-container2" style="height: 15.5vh">
+	<img src="pink.png">
+</div>
+	<section>
+		<div class="pinkcontainer">
+			<div class="wrap-paper">
+			<p style="padding-bottom: 30px;">판형 사이즈별로 많이 쓰이는 제작 용도를 알려줄게요.</p>
+			<div class="grid04" style="border: 30px 0">
+			<p class="whiteback">판형</p>
+			<p class="whiteback">사이즈</p>
+			<p class="whiteback">종이</p>
+			<p class="whiteback">제작 용도</p>
+
+			<p class="blackback">국배판</p>
+			<p class="blackback">227*304</p>
+			<p class="blackback">국전지</p>
+			<p class="blackback">자료집 / 보고서 / 논문집</p>
+
+			<p class="blackback">신국판</p>
+			<p class="blackback">152*225</p>
+			<p class="blackback">국전지</p>
+			<p class="blackback">자서전 / 수필 / 시집</p>
+
+			<p class="blackback">국판</p>
+			<p class="blackback">152*218</p>
+			<p class="blackback">국전지</p>
+			<p class="blackback">수필 / 소설</p>
+
+			<p class="blackback">국반판</p>
+			<p class="blackback">109*152</p>
+			<p class="blackback">국전지</p>
+			<p class="blackback">수필 / 소설</p>
+
+			<p class="blackback">타블로이드판</p>
+			<p class="blackback">374*254</p>
+			<p class="blackback">46전지</p>
+			<p class="blackback">문제집 / 전문서적 / 교재</p>
+
+			<p class="blackback">46배판</p>
+			<p class="blackback">188*254</p>
+			<p class="blackback">46전지</p>
+			<p class="blackback">주간지 / 잡지 / 문제집</p>
+
+			<p class="blackback">크라운판</p>
+			<p class="blackback">176*248</p>
+			<p class="blackback">46전지</p>
+			<p class="blackback">자서전 / 사진집</p>
+						
+			<p class="blackback">46판</p>
+			<p class="blackback">127*188</p>
+			<p class="blackback">46전지</p>
+			<p class="blackback">수필 / 시집</p>
+		</div>
+		</div>
+	</section>
+</div>
+
+	<section style="padding: 0">
+		<div class="wrap">
+			<p class="nomalp">사이즈를 알았다면 어떤 종이에 인쇄할지도 정해야겠죠?</p>
+		</div>
+	</section>
+
+<div class="blackcontainer">
+<div class="image-container2"  style="height: 13.5vh">
+	<img src="red.png">
+</div>
+	<section>
+		<div class="redcontainer">
+			<div class="wrap-header grid-h">
+				<p style="font-size: 1.8rem; color: white;">종이 분류</p>
+				<p style="color: white;">출판용으로 사용하는 대표적인 종이 분류입니다!<br> 이외의 지종은 단가가 높아서 실무에서 자주 쓰이지는 않아요.</p>
+			</div>
+			</div>
+		<div class="whitecontainer">
+			<div class="grid-p">
+				<p>용도 <span style="font-family: Krona One; font-size:0.9rem">Uses</p>
+				<p  style="color: gray;">분류 <span style="font-family: Krona One; font-size:0.9rem;">Type</span></p>
+				<p>종이 <span style="font-family: Krona One; font-size:0.9rem">Paper</p>
+
+				<p>내지용 <span style="font-family: Krona One; font-size:0.9rem">Inside Pages</span></p>
+				<p style="color: gray;">일반지</p>
+				<p>아트 / 스노우화이트 / 모조 / 미색모조 / 뉴플러스 / 이라이트</p>
+
+				<p></p>
+				<p style="color: gray;">고급지</p>
+				<p>랑데뷰 / 아이리스 / 문켄 / 아르떼 / 반누보 / 마쉬멜로우 /  몽블랑 / 앙상블 / 빌리지</p>
+
+				<p>표지용 <span style="font-family: Krona One; font-size:0.9rem">Cover</span></p>
+				<p style="color: gray;">일반지</p>
+				<p>아트 / 스노우화이트 / 모조</p>
+
+				<p></p>
+				<p style="color: gray;">고급지</p>
+				<p>랑데뷰 / 아이리스 / 문켄 /  아르떼 / 반누보 / 마쉬멜로우 / 몽블랑 / 앙상블 / 빌리지</p>
+
+				<p></p>
+				<p style="color: gray;">특수지</p>
+				<p>레자크 / 화일지 / 크래프트 / 뉴크래프트보드</p>
+
+				<p></p>
+				<p style="color: gray;">펄지</p>
+				<p>스타라이트 / 스타드림 / 오로</p>
+		</div>
+		</div>
+</section>
+</div>
+
+<section>
+		<div class="wrap">
+		<div class="line1 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span></div>
+		</div>
+		<div class="line2 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</div>
+		</div>
+	</div>
+</section>
+
+<section style="padding: 100px 0px" id="e4">
+	<div class="wrap">
+		<img src="tip.png" style="max-width: 400px; margin: auto;justify-content: center">
+	</div>
+</section>
+
+<section style="padding: 100px 0px">
+	<div class="wrap">
+		<div class="grid-tip">
+			<p> <span class="redp">재단 사이즈 & 작업 사이즈</span><br><br>작업물을 재단할 때 오차가 생겨 디자인이 잘릴 수도 있으니 작업 사이즈는 재단선 바깥까지 나가야해요! 약 3mm정도 안전하게 영역을 넓혀주세요.</p>
+			<img src="cut.png" style="max-width: 500px">
+</section>
+
+<section style="padding: 100px 0px">
+	<div class="wrap">
+		<div class="grid-tip">
+			<p> <span class="redp">블랙 인쇄</span><br><br>CMYK 블랙 인쇄를 했을 시 블랙이 밝고 흐릿하게 나온다면 리치 블랙을 사용해보세요. 4색의 비중을 달리 해도 되지만 웬만하면 cmyk의 값이 240을 넘지 않도록 해서 상황에 맞게 조정해보세요!</p>
+			<img src="black.png">
+</section>
+
+<section style="padding: 100px 0px">
+	<div class="wrap">
+		<div class="grid-tip">
+			<p> <span class="redp">CMYK 비중</span><br><br>풀컬러 인쇄의 경우 CMYK 총 4가지의 잉크를 조합하는 만큼 색상의 도수가 많이 섞이지 않는 게 더 예쁘고 균일하게 나와요. 도수가 많아질수록 일정한 결과물을 내기 어렵기 때문에 특히 추후에 재인쇄할 일이 있다면 더 주의해야해요! </p>
+			<img src="cmyk.png">
+</section>
+
+<section style="padding: 100px 0px 0px">
+	<div class="wrap">
+		<div class="line1 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span></div>
+		</div>
+		<div class="line2 krona">
+			<div class="lineanime"> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</span> how to print <span style="color: white;">how to print</div>
+		</div>
+	</div>
+
+	<div class="wrap-footer">
+	    <div class="footer">
+	<div class="column column-large">
+  		<p class="krona footerlogo">Essential<br>for print</p>
+  		<p class="krona footerp">Essential Printing Tips for Designers.<br>Essential for designers.<br>All in one place! The A to Z of printin<br>Tips to improve your printing quality<br>For everyone who has trouble printing</p>
+	</div>
+	<div class="column column-small">
+  		<p class="krona footerp" style="padding: 0px 0px 15px">about us</p>
+		<p class="footerp">회사 소개</p>
+		<p class="footerp">채용</p>
+		<p class="footerp">개인정보 처리 방침</p>
+		<p class="footerp">이용 약관</p>
+  	</div>
+	<div class="column column-small">
+		<p class="krona footerp" style="padding: 0px 0px 15px">contact</p>
+		<p class="krona footerp">kmy9336@gmail.com</p>
+	</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
